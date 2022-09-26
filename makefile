@@ -15,7 +15,7 @@ libadvmath.so: math.o
 
 install: libadvmath.so
 	install -d $(BINDIR)
-	install $^ $(BINDIR)/libirmath.so
+	install $^ $(BINDIR)/libadvmath.so
 
 clean:
 	rm -f libadvmath.so math.o math.bc
