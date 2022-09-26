@@ -8,7 +8,7 @@ math.bc: math.ll
 	llvm-as $^ -o $@
 
 math.o: math.bc
-	llc $^ -o $@ -filetype=obj
+	llc $^ -o $@ -filetype=obj --relocation-model=pic
 
 libadvmath.so: math.o
 	clang -shared -o $@ $^
