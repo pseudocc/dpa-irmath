@@ -1,3 +1,9 @@
+libirmath (1.0.0ubuntu2) jammy; urgency=medium
+
+  * Stable build.
+
+ -- Atlas Yu <atlas.yu@canonical.com>  Tue, 27 Sep 2022 10:21:30 +0800
+
 libirmath (1.0.0ubuntu1) unstable; urgency=medium
 
   * Fix error in debian/rules.
