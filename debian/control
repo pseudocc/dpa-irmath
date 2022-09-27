@@ -15,4 +15,4 @@ Package: libirmath-dev
 Architecture: all
 Depends: ${misc:Depends}, libirmath (= ${binary:Version})
 Description: DPA(Debian policy adventure): math library built from LLVM IR, header file(s).
-Conflicts: libcmath (= 1)
+Conflicts: libcmath
