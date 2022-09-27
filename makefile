@@ -1,6 +1,7 @@
 PREFIX=/usr/local
 
-BINDIR=$(PREFIX)/bin
+LIBDIR=$(PREFIX)/lib
+INCDIR=$(PREFIX)/include/libadvmath
 
 all: libadvmath.so
 
@@ -14,8 +15,10 @@ libadvmath.so: math.o
 	clang -shared -o $@ $^
 
 install: libadvmath.so
-	install -d $(BINDIR)
-	install $^ $(BINDIR)/libadvmath.so
+	install -d $(LIBDIR)
+	install -d $(INCDIR)
+	install -m 644 math.h $(INCDIR)/math.h
+	install libadvmath.so $(LIBDIR)/libadvmath.so
 
 clean:
 	rm -f libadvmath.so math.o math.bc

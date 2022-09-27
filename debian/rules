@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-PREFIX = $(CURDIR)/debian/libirmath/usr
+PREFIX = $(CURDIR)/debian/tmp/usr
 
 override_dh_auto_install:
 	$(MAKE) install PREFIX="$(PREFIX)"

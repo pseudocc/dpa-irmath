@@ -1,5 +1,5 @@
 Source: libirmath
-Standards-Version: 1.0.0
+Standards-Version: 1.1.0
 Section: libs
 Priority: optional
 Maintainer: Atlas Yu <atlas.yu@canonical.com>
@@ -8,5 +8,11 @@ Build-Depends: clang (>= 1:14), llvm (>= 1:14), make (>= 4.3), debhelper-compat 
 Package: libirmath
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: DPA(Debian policy adventure): math library built from LLVM IR.
+Description: DPA(Debian policy adventure): math library built from LLVM IR, shared object(s).
+Conflicts: libcmath (= 1)
+
+Package: libirmath-dev
+Architecture: all
+Depends: ${misc:Depends}, libirmath (= ${binary:Version})
+Description: DPA(Debian policy adventure): math library built from LLVM IR, header file(s).
 Conflicts: libcmath (= 1)
