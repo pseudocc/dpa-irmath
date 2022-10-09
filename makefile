@@ -18,7 +18,7 @@ install: libadvmath.so
 	install -d $(LIBDIR)
 	install -d $(INCDIR)
 	install -m 644 math.h $(INCDIR)/math.h
-	install libadvmath.so $(LIBDIR)/libadvmath.so.1
+	install libadvmath.so $(LIBDIR)/libadvmath.so.1c
 
 clean:
 	rm -f libadvmath.so math.o math.bc

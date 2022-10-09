@@ -1,3 +1,9 @@
+libirmath (1.2.0) jammy; urgency=medium
+
+  * resolve conflicts with libcmath (<< 1.1.0)
+
+ -- Atlas Yu <atlas.yu@canonical.com>  Fri, 30 Sep 2022 16:10:46 +0800
+
 libirmath (1.1.1) jammy; urgency=medium
 
   * add recommends field.
