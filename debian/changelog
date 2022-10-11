@@ -1,3 +1,9 @@
+libirmath (2.0.1) jammy; urgency=medium
+
+  * suppose upstream is fixing some errors.
+
+ -- Atlas Yu <atlas.yu@canonical.com>  Tue, 11 Oct 2022 12:12:34 +0800
+
 libirmath (2.0.0-1) jammy; urgency=medium
 
   * fix symbol link and binary install.
