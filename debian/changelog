@@ -1,3 +1,9 @@
+libirmath (2.0.0) jammy; urgency=medium
+
+  * merge libcmath into this.
+
+ -- Atlas Yu <atlas.yu@canonical.com>  Tue, 11 Oct 2022 10:04:24 +0800
+
 libirmath (1.2.0) jammy; urgency=medium
 
   * resolve conflicts with libcmath (<< 1.1.0)

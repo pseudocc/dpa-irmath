@@ -44,3 +44,36 @@ end:
   ret i32 %answer
 }
 
+define i32 @fac(i32 %0) {
+entry:
+  %is_nlt0 = icmp slt i32 %0, 0
+  br i1 %is_nlt0, label %neg, label %match
+
+neg:
+  %absn = sub i32 0, %0
+  %abs_fac = call i32 @fac(i32 %absn)
+  %neg_fac = sub i32 0, %abs_fac
+  br label %end
+
+match:
+  switch i32 %0, label %gt1 [
+    i32 0, label %is0
+    i32 1, label %is1
+  ]
+
+is0:
+  br label %is1
+
+is1:
+  br label %end
+
+gt1:
+  %n_minus = sub i32 %0, 1
+  %rec_fac = call i32 @fac(i32 %n_minus)
+  %prod = mul i32 %0, %rec_fac
+  br label %end
+
+end:
+  %answer = phi i32 [ %neg_fac, %neg ], [ 1, %is1 ], [ %prod, %gt1 ]
+  ret i32 %answer
+}
