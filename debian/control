@@ -9,7 +9,7 @@ Package: libirmath
 Architecture: all
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: DPA(Debian policy adventure): math library built from LLVM IR, shared object(s).
-Breaks: libcmath (<< 2)
+Breaks: libcmath (<< 2), calcfac (<< 1)
 Replaces: libcmath (<< 2)
 Recommends: libirmath-dev (= ${binary:Version})
 Provides: libadvmath
